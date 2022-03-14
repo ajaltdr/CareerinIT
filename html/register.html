@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="../css/styleregister.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style media="screen">
+      canvas{
+        border: 1px solid grey;
+      }
+    </style>
+    <style type="text/css">
+		input{
+			display: block;
+			margin: 10px;
+		}
+	</style>
+	<script type="text/javascript" src="../js/storage.js"></script>
+</head>
+<body>
+	<div class="logo"><span style="margin: 30%;"><a href="../index.html"><img class="lg"src="../images/logo.png" height="80px" width="450px"></a></span>
+    
+<div class="dropdown">
+  <button class="dropbtn">My Account </button>
+  <div class="dropdown-content">
+  <a href="login.html">Login</a>
+  <a href="#">Register</a>
+  </div>
+</div>
+  </div> 
+<div class="nav">
+  <li><a class="active" href="../index.html">HOME </a></li>
+  <li><a class="active" href="course.html">COURSES</a></li>
+  <li><a class="active" href="college.html">COLLEGES</a></li>
+  <li><a class="active" href="ing.html">ING NEPAL</a></li>
+  <li><a class="active" href="online.html">ONLINE</a></li>
+   
+</div> 
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h1 style="color: #004e70">Registration Form</h1>
+      <br><br>
+      
+  <div class="container">
+    
+    <p style="font-style: italic;">Fill the following form to create an account.</p>
+    <hr>
+    <div class ="form">
+      <form name="nForm" onsubmit="valf()" method="post">
+<label for="text"><b>First Name:</b></label><br>
+    <input type="text" id="FirstName" placeholder="First Name" required><br>
+    <label for="text"><b>Last Name:</b></label><br>
+    <input type="text" id="LastName" placeholder="Last Name" required><br>
+    <b>You are? </b><br> <br>
+  <select id="Category">
+    <option value="student">Student</option>
+    <option value="teacher">Teacher</option>
+    <option value="parent">Parent</option>
+    <option value="others">Others</option>
+  </select>
+  <br><br>
+    <label for="email"><b>Email:</b></label><br>
+    <input type="email" id="Email" placeholder="Enter Email" required><br>
+
+    <label for="psw"><b>Password:</b></label><br>
+    <input type="password" id="Password" placeholder="Enter Password"  required><br>
+
+    <label for="pswrepeat"><b>Confirm Password:</b></label><br>
+    <input type="password" id="Confirm" placeholder="Confirm Password" required><br>
+     <b>Date of Birth:</b><br><br>
+
+  <input type="date" id="Date">
+  
+  <br><br>
+    <hr>
+    <b>Digital Signature:</b>
+      <br><br>
+      <canvas>Your browser does not support the HTML5 canvas tag.</canvas> <!-- Fallback for outdated web browsers-->
+<script type=" src"js/storage.js"></script>
+<script type="text/javascript">
+  var canvas = document.querySelector('canvas');
+  var c = canvas.getContext('2d');
+
+  canvas.width = 500;
+  canvas.height = 250;
+
+var md = false;
+  canvas.addEventListener('mousedown', function(){
+    md = true;
+  })
+
+  canvas.addEventListener('mouseup', function(){
+    md = false;
+  })
+
+  var mouse = {
+    x: undefined, y: undefined
+  };
+
+  canvas.addEventListener('mousemove', function(e){
+    var rect = canvas.getBoundingClientRect();
+    mouse.x = e.x - rect.left;
+    mouse.y = e.y - rect.top;
+    draw(mouse.x,mouse.y);
+  })
+
+
+  function draw(x,y){
+    if(md){
+      c.fillRect(x,y,4,4);
+    }
+  }
+
+</script>
+<p style="font-style: italic;">(NOTE: Click and slowly draw your signture)</p>
+     <p>By creating an account you agree to our Terms & Privacy.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </form>
+  </div>
+  <script type=" src"../js/storage.js"></script>
+</div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+  </div>
+
+    </div>
+    
+  </div>
+
+</div>
+<footer>
+<div class="footer">
+  
+  <div class= "f1">
+   <h4>Managed by:</h4>
+   Ajal Tandukar
+	</div>
+<span style="text-align: center;"><small >Copyright &copy; Career in IT</small></span>
+</div>
+
+</footer>
+</body>
+</html>

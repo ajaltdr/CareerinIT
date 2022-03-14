@@ -1,0 +1,70 @@
+<!-- declaring -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Searching...</title>
+	<link rel="stylesheet" type="text/css" href="../css/search.css"> <!-- Linking with CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- JQuery for Toggle -->
+	<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+  $("h1,h3,p,h5").toggleClass("red");
+    $("p").animate({fontSize: '3em'}, "slow");
+    });
+  });
+</script>
+</head>
+
+<body>
+	<!-- Header -->
+	<header> 
+		<!-- Webpage Logo  -->
+	<div class="logo">
+		<span style="margin: 30%;">
+			<a href="../index.html"><img src="../images/logo.png" height="80px" width="450px"></a>
+		</span>
+    <!-- Dropdown -->
+	<div class="dropdown">
+  		<button class="dropbtn">My Account </button>
+  		<div class="dropdown-content">
+  			<a href="login.html">Login</a>
+  			<a href="register.html">Register</a>
+  		</div>
+	</div>
+  	</div>
+	</header> 
+  <!-- Navigation  -->
+<nav>
+	<div class="nav">
+  		<li><a class="active" href="../index.html">HOME </a></li>
+  		<li><a class="active" href="course.html">COURSES</a></li>
+  		<li><a class="active" href="college.html">COLLEGES</a></li>
+  		<li><a class="active" href="ing.html">ING NEPAL</a></li>
+  		<li><a class="active" href="online.html">ONLINE</a></li>
+   	<div class="search">
+    	<form>
+      		<input type="text" placeholder="Search.." name="search">
+      		<button type="submit"><a href="#"<i class="fa fa-search"></i></a></button>
+    	</form>
+  	</div>
+	</div> 
+</nav>
+<!-- Shadow effect -->
+<h1 style="text-align: center; text-shadow: 2px 2px 5px red;">Searching...</h1>
+<h3 style="text-align: center; text-shadow: 2px 2px 5px red;">Please Wait</h3>
+<h5 style="text-align: center;">Note: Click the button below to change color and font(Add/Remove Class and JQuery Animation)</h5>
+</div>
+<!-- Div for Animation -->
+<div class="searching">
+ 
+</div>
+<div class="ani">
+<button>Check page status</button>
+ <p>Page Underconstruction!</p>
+</div>
+
+</body>
+</html>
